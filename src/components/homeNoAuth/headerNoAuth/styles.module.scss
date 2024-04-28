@@ -1,0 +1,87 @@
+@import "../../../../styles/colors.model.scss";
+.ctaSection {
+  background-color: $lightRed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 0px;
+  gap: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+.imgCta {
+  width: 60px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.imgLogoNav {
+  width: 180px;
+}
+.navBtn {
+  border-color: transparent;
+  display: inline-block;
+  padding: 0.4rem 1.25rem;
+  border-radius: 10rem;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin:5px;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $lightRed;
+    border-radius: 10rem;
+    z-index: -2;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken($lightRed, 25%);
+    transition: all 0.5s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  &:hover {
+    color: white;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 606px){
+    .ctaSection{
+        text-align: center;
+    }
+    .imgCta {
+        margin: 0px 8px;
+      }
+}
+
+@media (max-width: 438px){
+    .nav {
+       justify-content: center;
+      }
+    .imgLogoNav{
+        margin-bottom: 20px;
+    }
+}

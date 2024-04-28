@@ -1,21 +1,33 @@
+import Link from "next/link";
 import styles from "./styles.module.scss";
-import logoAnimeChannel from "../../../../public/homeNoAuth/LogoAnimeChannel.webp"
+import { Container } from "postcss";
 
 const HeaderNoAuth = () => {
   return (
     <>
       <div className={styles.ctaSection}>
-        <img
-          src= "../../../../public/homeNoAuth/LogoAnimeChannel.webp"
-          alt="logoCta"
-          className={styles.imgCta}
-        />
-        <p>Faça seu cadastro para ter acesso aos Animes</p>
-        <img
-          src="../../../../public/homeNoAuth/LogoAnimeChannel.webp"
-          alt="logoCta"
-          className={styles.imgCta}
-        />
+        <img src="/favicon.svg" alt="logoCta" className={styles.imgCta} />
+    
+        <p>cadastre-se para ter acesso ilimitado aos Animes!</p>
+
+        <img src="/favicon.svg" alt="logoCta" className={styles.imgCta} />
+      </div>
+      
+      <div className={styles.nav}>
+        <img src="/nomecomlogodolado.png" alt="logoAnimeChannel" className={styles.imgLogoNav} />
+        <div>
+          
+          <Link href="/login">
+          <button className={styles.navBtn}>
+            Assistir
+          </button>
+          </Link>
+          <Link href="/registro">
+          <button className={styles.navBtn}>
+            Cadastro
+          </button>
+          </Link>
+        </div>
       </div>
     </>
   );
