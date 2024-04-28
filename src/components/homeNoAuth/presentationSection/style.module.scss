@@ -1,0 +1,78 @@
+@import '../../../../styles/colors.model.scss';
+
+.div{
+  margin-top: 0px;
+}
+.imgPresentation{
+  float:right; 
+  width:600px;
+  margin-right: 50px;
+  }
+.subTitle{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: $lightRed;
+    margin-left: 15px;
+    margin-top: 0px;
+}
+.title{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 40px;
+    margin-left: 15px;
+    margin-top: 40px ;
+}
+.description{
+    font-family: serif;
+    font-size: 25px;
+    color: $lightGray;
+    margin: 50px 0px 25px 40px;
+}
+.btnCta{
+    border-color: transparent;
+    display: inline-block;
+    padding: 0.4rem 1.25rem;
+    border-radius: 10rem;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin:5px;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $lightRed;
+      border-radius: 10rem;
+      z-index: -2;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($lightRed, 25%);
+        transition: all 0.5s;
+        border-radius: 10rem;
+        z-index: -1;
+      }
+      &:hover {
+        color: white;
+        &:before {
+          width: 100%;
+        }
+      }
+      margin-left: 0px;
+}
+.btnImg{
+    width: 20px;
+}
